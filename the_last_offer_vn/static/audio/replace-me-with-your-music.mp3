@@ -1,0 +1,7 @@
+Placeholder file for background music.
+
+Replace this file with a real MP3 and keep the same filename:
+replace-me-with-your-music.mp3
+
+Then open the frontend file and set MUSIC_ENABLED = true.
+File: the_last_offer_vn/static/index.html
