@@ -79,7 +79,7 @@ Then open:
 
 ## Troubleshooting
 
-- `Error: HTTP 401/403`: check your Groq API key in `.env`.
-- `Error: HTTP 429`: rate-limit hit; retry shortly.
+- `Error: HTTP 401/403`: check your Groq API and make sure its correct
+- `Error: HTTP 429`: rate-limit hit; retry after a few hours or upgrade your Groq plan.
 - Frontend not loading: ensure `server.py` is running and you opened `http://127.0.0.1:8000`.
 - WebSocket reconnect loops: check server logs for exceptions in `game_engine.py`.
