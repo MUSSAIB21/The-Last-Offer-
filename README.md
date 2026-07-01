@@ -4,11 +4,14 @@ A visual-novel style startup pitching game where you face four investor personas
 
 The current app runs as a FastAPI + WebSocket backend with a single-page frontend.
 
+You can try the game yourself from releases its an exe file but you need an API key so make an account on Groq and generate one for free.
+
+
 ## What this project includes
 
 - Web app (current): FastAPI server + WebSocket event loop + HTML/CSS/JS frontend
 - Core logic module: investor personas, Groq calls, scoring/parsing helpers
-- Legacy/experimental test scripts: quick Gradio-based end-to-end checks
+
 
 ## Project structure
 
@@ -16,9 +19,9 @@ The current app runs as a FastAPI + WebSocket backend with a single-page fronten
 - `the_last_offer_vn/game_engine.py`: game state machine and event generation
 - `the_last_offer_vn/static/index.html`: frontend UI and WebSocket client
 - `the_last_offer_vn/requirements.txt`: dependencies for the current web app
-- `the_last_offer_v4_25.py`: shared/core logic imported by the VN engine
-- `test_quick.py`, `test_session.py`, `test_smart.py`: legacy Gradio-oriented test scripts
-- `docs/groq-rate-limit-plan.md`: notes about Groq rate-limit handling
+- `the_last_offer_v4_25.py`: shared/core logic used by the VN engine
+
+
 
 ## Requirements
 
@@ -72,11 +75,7 @@ Then open:
 4. Backend returns a list of UI events (`scene`, `dialogue`, `buttons`, etc.).
 5. Frontend applies events in order.
 
-## Notes on tests
 
-`test_quick.py`, `test_session.py`, and `test_smart.py` target a Gradio flow (`/safe_turn`, usually port 7860), not the current FastAPI WebSocket app at port 8000.
-
-If you want to keep using those tests, you may need to run/restore the Gradio app path and install additional packages (for example `gradio-client`).
 
 ## Troubleshooting
 
